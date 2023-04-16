@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-size: 16px;
+}
+.container {
+  @apply max-w-5xl mx-auto;
+}
+a {
+  @apply block;
+}
+
+.hero-section {
+  background-image: url("../images/bg-hero-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (min-width: 600px) {
+  .hero-section {
+    background-image: url("../images/bg-hero-desktop.svg");
+  }
+}
+
+.header-content {
+  @apply flex justify-between items-center py-8 gap-2;
+}
+
+.hero-content {
+  @apply py-10 flex flex-col justify-center items-center gap-8 md:flex-row md:justify-between;
+}
+.convo-section,
+.grow-section,
+.user-section {
+  @apply flex flex-col gap-16 px-4 py-16 text-center rounded-md shadow-lg md:justify-center md: items-center md:text-left md:p-14;
+}
+.convo-section,
+.grow-section {
+  @apply my-8;
+}
+.user-section {
+  @apply mt-8 mb-0;
+}
+.convo-section {
+  @apply md:flex-row;
+}
+.grow-section,
+.user-section {
+  @apply md:flex-row-reverse;
+}
+.feature-title {
+  @apply font-Poppins text-2xl text-VeryDarkCyan;
+}
+.feature-para {
+  @apply text-GrayishBlue mt-4;
+}
+
+.footer-content {
+  @apply grid grid-cols-1 gap-16 py-10 md:grid-cols-3;
+}
+
+.cta-section {
+  margin: 0 1em;
+  width: 90%;
+  max-width: 650px;
+  box-shadow: 0px 1px 8px -1px #ccc;
+  border-radius: 15px;
+  position: relative;
+  top: 98px;
+}
+
+@media screen and (min-width: 600px) {
+  .cta-section {
+    margin: 0 auto;
+  }
+}
